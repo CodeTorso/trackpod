@@ -24,8 +24,8 @@ const bruceLeeQuotes = [
 ];
 
 function getQuote () {
-  return bruceLeeQuotes[Math.floor(Math.random() * bruceLeeQuotes.length)];
   noStore()
+  return bruceLeeQuotes[Math.floor(Math.random() * bruceLeeQuotes.length)];
 };
 
 export default getQuote;

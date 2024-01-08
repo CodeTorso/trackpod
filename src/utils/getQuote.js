@@ -1,3 +1,5 @@
+import { unstable_noStore as noStore } from 'next/cache';
+
 const bruceLeeQuotes = [
   "Do not pray for an easy life, pray for the strength to endure a difficult one.",
   "Absorb what is useful, discard what is not, add what is uniquely your own.",
@@ -23,6 +25,7 @@ const bruceLeeQuotes = [
 
 function getQuote () {
   return bruceLeeQuotes[Math.floor(Math.random() * bruceLeeQuotes.length)];
+  noStore()
 };
 
 export default getQuote;

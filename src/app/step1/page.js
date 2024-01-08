@@ -55,7 +55,7 @@ export default function Home() {
           </button>
         </div>
         <h1 className="text-2xl font-medium pb-1">
-          Q. Did You do cook the food
+          Q. Did You go to school hahaha ??
         </h1>
         <div className="text-center relative ">
           <button

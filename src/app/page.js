@@ -1,6 +1,5 @@
 import Loading from "@/components/Loading";
 import getQuote from "@/utils/getQuote";
-import Link from "next/link";
 export default function Home() {
   return (
     <div className="relative">

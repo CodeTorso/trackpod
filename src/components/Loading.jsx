@@ -4,10 +4,14 @@ import styles from "./loading.module.css";
 import { useState } from "react";
 
 const Loading = () => {
-  const [text, setText] = useState("haha");
+  const [text, setText] = useState("");
+  const [counter, setCounter] = useState(7);
+  setInterval(() => {
+    setCounter(counter - 1);
+  }, 900);
   setTimeout(() => {
     setText("Continue...");
-  }, 3000);
+  }, 7000);
 
   return (
     <div className="absolute top-[250%] left-1/2 -translate-x-1/2 ">
@@ -23,7 +27,7 @@ const Loading = () => {
           </button>
         </Link>
       ) : (
-        <div className={styles.spinner}>
+        <div className={styles.spinner + " relative"}>
           <svg viewBox="25 25 50 50">
             <circle
               cx="50"
@@ -33,6 +37,9 @@ const Loading = () => {
               className={styles.path}
             ></circle>
           </svg>
+          <p className="text-neutral-700 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            {counter}
+          </p>
         </div>
       )}
     </div>
